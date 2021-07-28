@@ -41,7 +41,7 @@ class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentVolume(100);
         radio.increaseVolume();
-        assertEquals(100, radio.getCurrentVolume());
+        assertEquals(10, radio.getCurrentVolume());
     }
 
     @Test
@@ -78,7 +78,7 @@ class RadioTest {
     public void shouldNotSetVolumeGreaterThanMax() {
         Radio radio = new Radio();
         radio.setCurrentVolume(250);
-        assertEquals(100, radio.getCurrentVolume());
+        assertEquals(10, radio.getCurrentVolume());
     }
 
     @Test
