@@ -8,6 +8,27 @@ public class Radio {
     private int currentVolume;
     private int currentChannel;
 
+    public Radio() {
+    }
+
+    public Radio(int maxRadioStation) {
+        this.maxRadioStation = maxRadioStation;
+    }
+
+    public Radio(int currentChannel, int maxRadioStation) {
+        this.currentChannel = currentChannel;
+        this.maxRadioStation = maxRadioStation;
+    }
+
+    public Radio(int maxVolume, int minVolume, int maxRadioStation, int minRadioStation, int currentVolume, int currentChannel) {
+        this.maxVolume = maxVolume;
+        this.minVolume = minVolume;
+        this.maxRadioStation = maxRadioStation;
+        this.minRadioStation = minRadioStation;
+        this.currentVolume = currentVolume;
+        this.currentChannel = currentChannel;
+    }
+
     public void increaseVolume() {
         if (currentVolume == maxVolume) {
             return;
